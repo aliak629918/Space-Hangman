@@ -3,7 +3,7 @@ import HiddenWord from "./HiddenWord";
 import GuessLetter from "./GuessLetter";
 import GameNotification from "./GameNotification";
 import GuessWord from "./GuessWord"
-import matchers from "@testing-library/jest-dom/matchers";
+
 function MainSection() {
   const [isGameFinished, setIsGameFinished] = useState(true);
   const [hiddenWord, setHiddenWord] = useState("");
