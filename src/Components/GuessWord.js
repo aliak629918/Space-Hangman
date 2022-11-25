@@ -1,29 +1,29 @@
 import { useState } from "react";
 
-function GuessLetter({ addLetterGuess, isGameFinished }) {
-  const [letterGuessInput, setLetterGuessInput] = useState("");
+function GuessWord({ addWordGuess, isGameFinished, wordLength }) {
+  const [wordGuessInput, setWordGuessInput] = useState("");
 
   function handleChange(event) {
-    setLetterGuessInput(event.target.value);
+    setWordGuessInput(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    if (!/[A-Za-z]/.test(letterGuessInput)) {
-      setLetterGuessInput("");
+    if (!/[A-Za-z]/g.test(wordGuessInput)) {
+        setWordGuessInput("");
       return;
     }
-    addLetterGuess(letterGuessInput);
-    setLetterGuessInput((currInput) => {
+    addWordGuess(wordGuessInput);
+    setWordGuessInput((currInput) => {
       return "";
     });
   }
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Guess a Letter
+        Guess the word
         <input
-          maxLength={1}
-          value={letterGuessInput}
+          maxLength={wordLength}
+          value={wordGuessInput}
           onChange={(event) => {
             handleChange(event);
           }}
@@ -35,4 +35,4 @@ function GuessLetter({ addLetterGuess, isGameFinished }) {
   );
 }
 
-export default GuessLetter;
+export default GuessWord;

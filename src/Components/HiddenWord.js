@@ -1,14 +1,16 @@
-function HiddenWord({ hiddenWord, letterGuesses }) {
+function HiddenWord({ hiddenWord, letterGuesses, isGameFinished}) {
   const hiddenWordArray = hiddenWord.toUpperCase().split("");
   const displayArray = [];
+
   hiddenWordArray.forEach((letter) => {
-    if (letterGuesses.includes(letter)) {
+    if (letterGuesses.includes(letter) || isGameFinished === true) {
       displayArray.push(letter);
     } else {
       displayArray.push("_");
     }
   });
-  console.log(hiddenWordArray);
+
+
   return (
     <div>
       {displayArray.map((letter, index) => {
