@@ -1,4 +1,4 @@
-function HiddenWord({ hiddenWord, letterGuesses, isGameFinished}) {
+function HiddenWord({ hiddenWord, letterGuesses, isGameFinished }) {
   const hiddenWordArray = hiddenWord.toUpperCase().split("");
   const displayArray = [];
 
@@ -10,9 +10,8 @@ function HiddenWord({ hiddenWord, letterGuesses, isGameFinished}) {
     }
   });
 
-
   return (
-    <div>
+    <div className="hidden-word">
       {displayArray.map((letter, index) => {
         return (
           <span
@@ -20,7 +19,6 @@ function HiddenWord({ hiddenWord, letterGuesses, isGameFinished}) {
             style={{
               textDecoration: "underline",
               marginRight: "0.5rem",
-              fontSize: "2rem",
             }}
           >
             {letter}

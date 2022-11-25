@@ -1,0 +1,76 @@
+.App {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 600px;
+  width: 600px;
+  background-image: url(https://wallpaperaccess.com/full/219455.jpg);
+}
+
+section > button {
+  margin-bottom: 8rem;
+}
+
+.hidden-word {
+  margin-bottom: 4rem;
+  font-size: 4rem;
+}
+
+form {
+  margin: 1rem;
+  text-align: right;
+  margin-right: 8rem;
+}
+
+form input {
+  margin: 0 0.5rem;
+}
+
+section > button {
+  font-weight: bold;
+  background-color: rgb(50, 160, 211);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 1rem;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+section > button:hover {
+  background-color: rgb(12, 58, 110);
+}
+
+form button {
+  background-color: rgb(50, 211, 71);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 1rem;
+  border-radius: 3px;
+}
+
+form button:hover {
+  border-color: #23b406;
+  color: #fff;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #4d8109 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(45deg, #336e05 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 1000ms ease-in-out;
+  transition: background 1000ms ease-in-out;
+}
